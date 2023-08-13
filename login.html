@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="css/login_style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body background="images/bg3.jpg">
+    <div class="container">
+        <div class="boxSignin">
+            <h2>Already Have an Account?</h2>
+            <button class="signinBtn">Sign in</button>
+        </div>
+        <div class="boxSignup">
+            <h2>Don't Have an Account ?</h2>
+            <button class="signupBtn">Sign up</button>
+        </div>
+        <div class="formBx">
+            <div class="form_signinform">
+                <form action="login.php" method="post">
+                    <h3>Sign In</h3>
+                    <input type="text" placeholder="Username" name="username">
+                    <input type="password" placeholder="Password" name="password">
+                    <input type="submit" value="Login" name="login">
+                    <a href="#" class="forgot">Forgot Password</a>
+                </form>
+            </div>
+
+            <div class="form_signupform">
+                <form action="" method="">
+                    <h3>Sign Up</h3>
+                    <input type="text" placeholder="Username" name="username">
+                    <input type="text" placeholder="Email" name="email">
+                    <input type="password" placeholder="Password" name="password">
+                    <input type="password" placeholder="Confirm Password" name="cpassword">
+                    <input type="submit" value="Register" name="register">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        let signinBtn = document.querySelector('.signinBtn');
+        let signupBtn = document.querySelector('.signupBtn');
+        let body = document.querySelector('body');
+
+        signupBtn.onclick = function(){
+            body.classList.add('slide');
+        }
+        signinBtn.onclick = function(){
+            body.classList.remove('slide');
+        }
+    </script>
+</body>
+</html>
